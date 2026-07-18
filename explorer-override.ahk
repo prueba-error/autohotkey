@@ -2,6 +2,8 @@
 
 ; Override Win + E using the $ hook
 $#e:: {
+    userProfile := EnvGet("USERPROFILE")
+
     ; Create an InputHook: 
     ; L1 = Limit to 1 character
     ; T2 = Timeout after 2 seconds
@@ -20,11 +22,11 @@ $#e:: {
         
         case "e":
             ; User Profile / Home directory
-            Run(A_UserProfile) 
+            Run(userProfile) 
             
         case "c":
             ; Code directory
-            Run(A_UserProfile "\Code") 
+            Run(userProfile "\Code") 
 
         case "s":
             ; "This PC" / My Computer
@@ -32,7 +34,7 @@ $#e:: {
             
         case "l":
             ; Labubu folder on Desktop
-            Run(A_UserProfile "\Desktop\labubu") 
+            Run(userProfile "\Desktop\labubu") 
 
         default:
             ; Fallback: If you press Win+E and let it time out, 
