@@ -1,6 +1,6 @@
 # Custom AutoHotkey v2.0 Utility Scripts
 
-A collection of AutoHotkey v2.0 scripts i use to streamline my workflows on Windows.
+A collection of AutoHotkey v2.0 scripts I use to streamline my workflows on Windows.
 
 ---
 
